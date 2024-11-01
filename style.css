@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --color-yellow: hsl(47, 88%, 63%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-gray-500: hsl(0, 0%, 42%);
+    --color-gray-950: hsl(0, 0%, 7%);
+
+    --font-size-1: 24px;
+    --font-size-2: 16px;
+    --font-size-3: 14px;
+    --line-height: 1.5;
+    --letter-spacing: 0;
+
+    --spacing-300: 24px;
+    --spacing-150: 12px;
+    --spacing-100: 8px;
+    --spacing-50: 4px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Figtree', sans-serif;
+    font-size: var(--font-size-2);
+    line-height: var(--line-height);
+    color: var(--color-gray-950);
+    background-color: var(--color-yellow);
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-container {
+    position: relative;
+    display: flex;
+    gap: var(--spacing-300);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-300);
+    background-color: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-gray-950)
+}
+
+.post-info{
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-150);
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.post-image {
+    position: relative;
+    width: 336px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .post-image {
+        width: 279px;
+    }
+}
+
+.post-image img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.post-label{
+    background-color: var(--color-yellow);
+    color: var(--color-gray-950);
+    font-size: var(--font-size-3);
+    font-weight: 700;
+    padding: var(--spacing-50) var(--spacing-150);
+    border-radius: 4px;
+}
